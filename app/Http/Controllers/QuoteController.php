@@ -93,10 +93,10 @@ class QuoteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'Season'=>'required',
-            'Episode'=>'requried',
-            'Quote'=>'required'
+        $validator = Validator::make($request->all(),[
+            'Season'=>['required'],
+            'Episode'=>['requried'],
+            'Quote'=>['required']
         ]);
         $quote = Quotes::find($id);
         $quote->Season= $request->get('Season');

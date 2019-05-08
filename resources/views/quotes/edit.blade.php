@@ -24,16 +24,16 @@
         @method('PATCH')
         @csrf
         <div class="form-group">
-          <label for="name">Quote Season:</label>
+          <label for="Season">Quote Season:</label>
           <input type="text" class="form-control" name="Season" value={{ $quote->Season }} />
         </div>
         <div class="form-group">
-          <label for="price">Episode :</label>
+          <label for="Episode">Episode :</label>
           <input type="text" class="form-control" name="Episode" value={{ $quote->Episode }} />
         </div>
         <div class="form-group">
-          <label for="quantity">Quote:</label>
-          <input type="text" class="form-control" name="share_qty" value={{ $quote-> Quote }} />
+          <label for="Quote">Quote:</label>
+          <input type="text" class="form-control" name="Quote" value={{ $quote-> Quote }} />
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
       </form>
